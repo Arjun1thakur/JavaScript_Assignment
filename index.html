@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Javascript Handson-10  <span>(Assignment)</span></h1>
+            <h2>Q1. Socks Draws</h2>
+            <h2><pre>Ans.
+                const sockDraws = (n) => {
+                    return n+1;
+               };
+            </pre></h2>
+            <h2>Q2. Square Fit</h2>
+            <h2><pre>Ans.
+                const squareFit = (m,n) => {
+                    if(m%2!==0  &&  n%2!==0){
+                      return  ((m*n)-1)/2;
+                    }else{
+                      return  (m*n)/2;
+                    }
+                  };
+            </pre></h2>
+            <h2>Q3. Age calculation</h2>
+            <h2><pre>Ans.
+                const ageCalculation = (f,s) => {
+                    return Math.abs(f-2*s);
+                };
+            </pre></h2>
+            <h2>Q4. Atom Combine</h2>
+            <h2><pre>Ans.
+                const atomCombine = (s) => {
+                    let num=2**s-1
+                    return num;
+                  };
+            </pre></h2>
+            <h2>Q5. Discount Value</h2>
+            <h2><pre>Ans.
+                const discountValue = (p,d) => {
+                    let value = (p * (100-d))/100;
+                    return Number(value);
+                  };
+            </pre></h2>
+            <h2>Q6. Range Victory</h2>
+            <h2><pre>Ans.
+                const LargestNumber = (l,r)=>{
+                    if(l==r){
+                      return  l;
+                    }else{
+                      return  1;
+                    }
+                  };
+            </pre></h2>
+            <h2>Q7. Divisibility Test</h2>
+            <h2><pre>Ans.
+                const DivTest = (n) => {
+                    if(n%10===0){
+                      return 0;
+                    }else if((n*2)%10===0){
+                      return 1;
+                    }else{
+                      return -1;
+                    }
+                  };
+            </pre></h2>
+            <h2>Q8. Building Up Ten</h2>
+            <h2><pre>Ans.
+                const BuildTen = (A,B) => {
+                    if(A==10 || B==10 || A+B==10){
+                      return true;
+                    }else{
+                      return false
+                    }
+                  };
+            </pre></h2>
+            <h2>Q9. Play with Boolean</h2>
+            <h2><pre>Ans.
+                const ChangeBool = (A) => {
+                    if(A=='true' || A==1 ){
+                      return 0;
+                    }else{
+                      return 1;
+                    }
+                  };
+            </pre></h2>
+            <h2>Q10. Checking Range</h2>
+            <h2><pre>Ans.
+                const CheckRange = (A,B,C) => {
+                    let str=[];
+                    str.push(A,B,C);
+                    if(str[0]==B+1 && str[2]==B+2){
+                      return 'true';
+                    }else{
+                      return 'false';
+                    }
+                  };
+            </pre></h2>
+            <h2>Q11. Pattern Puzzle</h2><pre><h2>
+                X
+                XX
+                XXX
+                XXXX
+                XXXXX
+            </h2></pre>
+            <h2><pre>Ans.
+                const CompletePattern = (N) =>{
+                    for(let i=0;i<=N;i++){
+                      let str='';
+                      for(let j=0;j< i;j++){
+                        str+='X'
+                      }
+                      console.log(str);
+                    }
+                  };
+            </pre></h2>
+            <h2>Q12. Pattern Puzzle 1</h2>
+            <h2><pre>
+                1 
+                1 2 
+                1 2 3 
+                1 2 3 4
+                1 2 3 4 5 
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let i=1;i<=N;i++){
+                      let str='';
+                      for(let j=1;j<=i;j++){
+                        str=str+j+' ';
+                      }console.log(str)
+                    }
+                  };
+            </pre></h2>
+            <h2>Q13. Pattern Puzzle 3</h2>
+            <h2><pre>
+                1 
+                2 2 
+                3 3 3 
+                4 4 4 4
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let i=1;i<=N;i++){
+                      let str='';
+                      for(let j=1;j<=i;j++){
+                        str=str+i+' ';
+                      }console.log(str)
+                    }
+                  };
+            </pre></h2>
+            <h2>Q14. Pattern Puzzle 4</h2>
+            <h2><pre>
+                ###1 
+                ##1 2 
+                #1 2 3 
+                1 2 3 4
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let i=1;i<=N;i++){
+                      str='';
+                      for(let j=1;j<=(N-i);j++){
+                        str+='#'
+                      }
+                      for(let k=1;k<=i;k++){
+                        str+=k+' '
+                      }
+                      console.log(str)
+                    }
+                  };
+            </pre></h2>
+            <h2>Q15. Pattern Puzzle 5</h2>
+            <h2><pre>
+                1 
+                0 1 
+                1 0 1 
+                0 1 0 1 
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let  i=0;i< N;i++){
+                      str='';
+                      for(let j=0;j<=i;j++){
+                        if((i%2===0 && j%2!==0) || (i%2!==0 && j%2===0)){
+                          str+='0 '
+                        }else{
+                          str+='1 '
+                        }
+                      }console.log(str)
+                    }
+                  };
+            </pre></h2>
+            <h2>Q16. Pattern Puzzle 6</h2>
+            <h2><pre>
+                A 
+                A B 
+                A B C 
+                A B C D 
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    let n=N.charCodeAt();
+                    for(let i=65;i<=n;i++){
+                      str='';
+                      for(let j=65;j<=i;j++){
+                        str+=String.fromCharCode(j)+' ';
+                      }
+                      console.log(str)
+                    }
+                  };
+            </pre></h2>
+            <h2>Q17. Pattern Puzzle 7</h2>
+            <h2><pre>
+                ##X
+                #XX
+                XXX 
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let i=1;i<=N;i++){
+                      str='';
+                      for(let j=1;j<=(N-i);j++){
+                        str+='#'
+                      }
+                      for(let k=1;k<=i;k++){
+                        str+='X'
+                      }
+                      console.log(str)
+                    }
+                  };
+            </pre></h2>
+            <h2>Q18. Shaped Puzzle</h2>
+            <h2><pre>
+                1 
+                0 1 
+                0 1 0 
+                1 0 1 0  
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    let sum=0;
+                    for(let i=1;i<=N;i++){
+                      str='';
+                      for(let j=1;j<=i;j++){
+                        sum++;
+                        if(sum%2===0){
+                          str+='0 '
+                        }else{
+                          str+='1 '
+                        }
+                      }
+                      console.log(str)
+                    }
+                };
+            </pre></h2>
+            <h2>Q19. Shaped Puzzle 1</h2>
+            <h2><pre>
+                1 2 3 4 
+                1 2 3 
+                1 2 
+                1
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let i=N;i>=1;i--){
+                      sum=0;
+                      str='';
+                      for(let j=i;j>=1;j--){
+                        sum++;
+                        str+=sum+' ';
+                      }
+                    console.log(str);
+                    }
+                  };
+            </pre></h2>
+            <h2>Q20. Pattern Puzzle 2</h2>
+            <h2><pre>
+                ???X???
+                ??XXX??
+                ?XXXXX?
+                XXXXXXX
+            </pre></h2>
+            <h2><pre>Ans.
+                const CompletePattern = (N) => {
+                    for(let i=1;i<=N;i++){
+                      str='';
+                      for(let j=1;j<=(N-i);j++){
+                        str+='?';
+                      }
+                      for(let k=1;k<=(2*i-1);k++){
+                        str+='X'
+                      }
+                      for(let j=1;j<=(N-i);j++){
+                        str+='?';
+                      }
+                    console.log(str)
+                    }  
+                  };
+            </pre></h2>
+            <h2>Q21. Armstrong Number.</h2>
+            <h2><pre>Ans.
+                const CheckArm = (N) =>{
+                    n=N.toString();
+                    let sum=0;
+                    let ok=N
+                    for(let i=0;i< n.length;i++){
+                      let g = ok % 10;
+                      sum+=g**3;
+                      ok = parseInt(ok / 10);
+                    }
+                    if(sum==N){
+                      return 'Yes';
+                    }else{
+                      return 'No';
+                    }
+                };
+            </pre></h2>
+            <h2>Q22. Unique Array.</h2>
+            <h2><pre>Ans.
+                const UniqueElements = (N,arr) => {
+                    let arr2=[]
+                    for(let i=0;i< N;i++){
+                      if(!arr2.includes(arr[i])){
+                        arr2.push(arr[i])
+                      }
+                    }
+                    for(let i=0;i< arr2.length;i++){
+                      console.log(arr2[i])
+                    }
+                  };
+            </pre></h2>
+            <h2>Q23. Unique Array.</h2>
+            <h2><pre>Ans.
+                const DuplicateElements = (N,arr) => {
+                    let arr2=[];
+                    let arr3=[];
+                    for(let i=0;i< N;i++){
+                      for(let j=0;j< N;j++){
+                        if(arr[i]==arr[j] &&  i!=j){
+                          arr2.push(arr[i]);
+                        }
+                      }
+                    }
+                    for(let i=0;i< arr2.length;i++){
+                        if(!arr3.includes(arr2[i])){
+                        arr3.push(arr2[i]);
+                      }
+                    }
+                    for(let i=0;i< arr3.length;i++){
+                      console.log(arr3[i])
+                    }
+                  };
+            </pre></h2>
+    </div>
+</body>
+</html>
